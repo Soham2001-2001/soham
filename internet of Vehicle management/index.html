@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IoV Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Add the favicon link here -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #8B0000, #c73a30, #8B0000, #c73a30);
+            background-size: 400% 400%;
+            animation: gradient 10s linear infinite;
+            color: white;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Add Vehicle</h2>
+            <label for="vehicleName">Vehicle Name:</label>
+            <input type="text" id="vehicleName" placeholder="Model 3">
+            <label for="vehicleModel">Vehicle Model:</label>
+            <input type="text" id="vehicleModel" placeholder="Electric Car">
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" placeholder="John Doe">
+            <label for="vehicleLocation">Vehicle Location:</label>
+            <input type="text" id="vehicleLocation" placeholder="Location">
+            <label for="vehicleHealth">Vehicle Health:</label>
+            <input type="text" id="vehicleHealth" placeholder="Healthy">
+            <label for="vehicleType">Vehicle Type:</label>
+            <input type="text" id="vehicleType" placeholder="Sedan">
+            <button id="addVehicleButton" class="white-button">Add Vehicle</button>
+        </div>
+
+        <div class="right-panel">
+            <h2>Vehicle List</h2>
+            <button id="getVehicleCountButton" class="white-button">Get Vehicle Count</button>
+            <button id="getVehicleButton" class="white-button">Get Vehicle</button>
+            <input type="number" id="vehicleIndex" placeholder="Enter Index">
+            <p id="result"></p> <!-- Added element to display results -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script src="remix.js"></script>
+</body>
+</html>
